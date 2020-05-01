@@ -1,0 +1,46 @@
+2020/05/01 14:33:23 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "gii". in /home/zanefinner/Desktop/gradebook/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/zanefinner/Desktop/gradebook/framework/web/CWebApplication.php(141): CWebApplication->runController('gii')
+#1 /home/zanefinner/Desktop/gradebook/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/zanefinner/Desktop/gradebook-app/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=gii
+---
+2020/05/01 14:40:51 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "login". in /home/zanefinner/Desktop/gradebook/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/zanefinner/Desktop/gradebook/framework/web/CWebApplication.php(141): CWebApplication->runController('login')
+#1 /home/zanefinner/Desktop/gradebook/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/zanefinner/Desktop/gradebook-app/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=login
+---
+2020/05/01 14:40:58 [error] [exception.CHttpException.404] CHttpException: Unable to resolve the request "index/login". in /home/zanefinner/Desktop/gradebook/framework/web/CWebApplication.php:286
+Stack trace:
+#0 /home/zanefinner/Desktop/gradebook/framework/web/CWebApplication.php(141): CWebApplication->runController('index/login')
+#1 /home/zanefinner/Desktop/gradebook/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#2 /home/zanefinner/Desktop/gradebook-app/index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/index.php?r=index/login
+---
+2020/05/01 14:43:34 [error] [exception.CDbException] CDbException: CDbConnection failed to open the DB connection: could not find driver in /home/zanefinner/Desktop/gradebook/framework/db/CDbConnection.php:399
+Stack trace:
+#0 /home/zanefinner/Desktop/gradebook/framework/db/CDbConnection.php(347): CDbConnection->open()
+#1 /home/zanefinner/Desktop/gradebook/framework/db/CDbConnection.php(325): CDbConnection->setActive(true)
+#2 /home/zanefinner/Desktop/gradebook/framework/base/CModule.php(394): CDbConnection->init()
+#3 /home/zanefinner/Desktop/gradebook/framework/base/CModule.php(103): CModule->getComponent('db')
+#4 /home/zanefinner/Desktop/gradebook/framework/gii/generators/crud/CrudCode.php(44): CModule->__get('db')
+#5 /home/zanefinner/Desktop/gradebook/framework/web/CFormModel.php(39): CrudCode->init()
+#6 /home/zanefinner/Desktop/gradebook/framework/gii/CCodeGenerator.php(153): CFormModel->__construct()
+#7 /home/zanefinner/Desktop/gradebook/framework/gii/CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 /home/zanefinner/Desktop/gradebook/framework/web/actions/CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 /home/zanefinner/Desktop/gradebook/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#10 /home/zanefinner/Desktop/gradebook/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#11 /home/zanefinner/Desktop/gradebook/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 /home/zanefinner/Desktop/gradebook/framework/web/CWebApplication.php(282): CController->run('index')
+#13 /home/zanefinner/Desktop/gradebook/framework/web/CWebApplication.php(141): CWebApplication->runController('gii/crud/index')
+#14 /home/zanefinner/Desktop/gradebook/framework/base/CApplication.php(185): CWebApplication->processRequest()
+#15 /home/zanefinner/Desktop/gradebook-app/index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/index.php?r=gii/crud/index
+HTTP_REFERER=http://localhost:8000/index.php?r=gii/default/index
+---
